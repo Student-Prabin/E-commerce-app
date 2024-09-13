@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom'
 import { ShopContext } from '../context/ShopContext';
 import { assets } from '../assets/assets';
+import RelatedProducts from '../components/RelatedProducts';
 
 const Product = () => {
 
@@ -62,8 +63,29 @@ const Product = () => {
             </div>
           </div>
           <button className='bg-black text-white px-8 py-3 text-sm active:bg-gray-700'>ADD TO CART</button>
+          <hr className='mt-8 w-4/5 ' />
+          <div className='text-sm text-gray-500 mt-5 flex-col flex gap-1'>
+            <p >100% original product.</p>
+            <p>Cash on Delivery is available on this product.</p>
+            <p>Easy return and exchange policy within 7days.</p>
+          </div>
         </div>
       </div>
+
+      {/* Description and Review section */}
+      <div className='mt-20'>
+        <div className='flex'>
+          <b className='border px-5 py-3 text-sm'>Description</b>
+          <p className='border px-5 py-3 text-sm'>Reviews(122)</p>
+        </div>
+        <div className='flex flex-col gap-4 border px-6 py-6 text-sm text-gray-500'>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem nostrum ea, quas, vitae accusantium dolores accusamus minima fugit maxime consequatur porro facilis reiciendis magni voluptatum sequi. Aut corrupti non nostrum?</p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius ex reprehenderit excepturi, veniam iure laborum, mollitia, maxime cumque perferendis esse inventore cupiditate doloremque id nemo. Tempora necessitatibus quisquam magnam minima?
+            Voluptatibus earum suscipit ullam neque hic quae placeat nihil, corrupti, ipsam quia fugit? Fugiat dolor autem eligendi, nisi dicta earum! In, impedit labore perspiciatis inventore nesciunt debitis dicta. Necessitatibus, ea.</p>
+        </div>
+      </div>
+      {/* display related products */}
+      <RelatedProducts category={productData.category} subCategory={productData.subCategory} />
     </div>
   ) : <div className='opacity-0'>no</div>
 }
