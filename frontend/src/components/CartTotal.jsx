@@ -1,6 +1,8 @@
 const CartTotal = () => {
   return (
-    <div>CartTotal</div>
+    <div>
+
+    </div>
   )
 }
 export default CartTotal
