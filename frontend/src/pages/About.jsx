@@ -1,4 +1,5 @@
 import { assets } from "../assets/assets"
+import NewsletterBox from "../components/NewsletterBox"
 import Title from "../components/Title"
 
 const About = () => {
@@ -34,6 +35,7 @@ const About = () => {
           <p className="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias saepe assumenda, omnis esse ducimus nisi doloribus quo facilis culpa voluptatum distinctio voluptatibus vel, optio, enim error delectus odit eligendi ut?1.5</p>
         </div>
       </div>
+      <NewsletterBox />
     </div>
   )
 }
