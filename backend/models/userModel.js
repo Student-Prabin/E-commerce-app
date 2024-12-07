@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const useSchema = new mongoose.Schema({
+const userSchema = new mongoose.Schema({
   name: {
     type: String,
     require: true
@@ -22,6 +22,6 @@ const useSchema = new mongoose.Schema({
 
 }, { minimize: false })
 
-const userModel = mongoose, models.user || mongoose.model("user", userSchema);
+const userModel = mongoose.models.user || mongoose.model("user", userSchema);
 
 export default userModel;
